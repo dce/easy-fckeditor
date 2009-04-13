@@ -30,9 +30,9 @@ module Fckeditor
 
       if options[:ajax]
         inputs = "<input type='hidden' id='#{id}_hidden' name='#{object}[#{field}]'>\n" <<
-                 "<textarea id='#{id}' #{cols} #{rows} name='#{id}'>#{value}</textarea>\n"
+                 "<textarea id='#{id}' #{cols} #{rows} name='#{id}'>#{h value}</textarea>\n"
       else
-        inputs = "<textarea id='#{id}' #{cols} #{rows} name='#{object}[#{field}]'>#{value}</textarea>\n"
+        inputs = "<textarea id='#{id}' #{cols} #{rows} name='#{object}[#{field}]'>#{h value}</textarea>\n"
       end
 
       js_path = "#{controller.relative_url_root}/javascripts"
